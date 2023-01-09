@@ -17,6 +17,7 @@ const { phoneNumberFormatter } = require('./helpers/formatter');
 const { Console } = require('console');
 
 const port = process.env.PORT || 8000;
+const token ="";
 
 const app = express();
 const server = http.createServer(app);
@@ -162,7 +163,7 @@ client.on('message', async (message) => {
             }, {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'Bearer '+token,
                 },
             })
             .then((response) => {
